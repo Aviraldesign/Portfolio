@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Brand Identity - Aviral Agarwal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" />
+    <style>
+        body {
+            background: linear-gradient(to right, rgba(15, 23, 42, 0.9), rgba(30, 41, 59, 0.9)), url('/images/grid-pattern.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .glass-panel {
+            background: linear-gradient(to bottom right,
+                    rgba(17, 24, 39, 0.5),
+                    rgba(45, 55, 72, 0.3));
+            backdrop-filter: blur(20px) saturate(160%);
+            -webkit-backdrop-filter: blur(20px) saturate(160%);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5),
+                inset 0 0 20px rgba(255, 255, 255, 0.05);
+            border-radius: 1rem;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .glass-panel:hover {
+            box-shadow: 0 12px 48px rgba(0, 0, 0, 0.6),
+                inset 0 0 25px rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #ffffff, #e2e8f0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .pattern-bg {
+            background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+
+        .escalator-wrapper {
+            height: 600px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .escalator-scroll {
+            animation: scrollUp 40s linear infinite;
+        }
+
+        .escalator-masonry {
+            column-count: 3;
+            column-gap: 0.8rem;
+        }
+
+        .escalator-masonry img {
+            width: 100%;
+            margin-bottom: 1rem;
+            border-radius: 0.75rem;
+            transition: transform 0.2s ease-in-out;
+            cursor: pointer;
+        }
+
+        .escalator-masonry img:hover {
+            transform: scale(1.03);
+        }
+
+        @keyframes scrollUp {
+            0% {
+                transform: translateY(0%);
+            }
+
+            100% {
+                transform: translateY(-50%);
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .escalator-masonry {
+                column-count: 2;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .escalator-masonry {
+                column-count: 1;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-gray-900 text-white font-['Helvetica']">
+    <header class="fixed top-0 left-0 right-0 bg-gray-900/60 backdrop-blur-xl z-50 shadow-lg border-b border-white/5">
+        <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="/" class="text-2xl font-bold text-white">Aviral Agarwal</a>
+
+            <!-- RIGHT SIDE NAV LINKS -->
+            <div class="flex items-center gap-6 text-gray-300 relative">
+                <a href="/" class="hover:text-white">Home</a>
+                <a href="#case-study" class="hover:text-white">Case Study</a>
+
+                <!-- 🔽 Hamburger Dropdown (no absolute) -->
+                <div class="relative">
+                    <button id="hamburgerButton"
+                        class="flex flex-col space-y-1 p-2 rounded hover:bg-gray-700 focus:outline-none">
+                        <span class="w-6 h-0.5 bg-white"></span>
+                        <span class="w-6 h-0.5 bg-white"></span>
+                        <span class="w-6 h-0.5 bg-white"></span>
+                    </button>
+
+                    <!-- 📋 Dropdown Menu -->
+                    <div id="hamburgerMenu"
+                        class="hidden absolute right-0 mt-2 w-48 bg-white text-black rounded shadow-lg border">
+                        <a href="Finance.html" class="block px-4 py-2 hover:bg-gray-200">Finance App Ui</a>
+                        <a href="ecommerce.html" class="block px-4 py-2 hover:bg-gray-200">E-commerce</a>
+                        <a href="BrandIdentity.html" class="block px-4 py-2 hover:bg-gray-200">Brand Identity</a>
+                        <a href="Design.html" class="block px-4 py-2 hover:bg-gray-200">Design Sketches</a>
+                        <a href="Projects.html" class="block px-4 py-2 hover:bg-gray-200">College Projects</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="pt-24 pb-20 px-6 pattern-bg">
+        <div class="max-w-6xl mx-auto">
+            <section class="glass-panel p-10 rounded-xl mb-10">
+                <div class="escalator-wrapper">
+                    <div class="escalator-scroll">
+                        <div class="escalator-masonry">
+                            <img src="web img/insta ts (1).jpg" alt="Sketch 1" />
+                            <img src="web img/insta ts (2).jpg" alt="Sketch 2" />
+                            <img src="web img/insta ts (3).jpg" alt="Sketch 3" />
+                            <img src="web img/insta ts (4).jpg" alt="Sketch 4" />
+                            <img src="web img/insta ts (5).jpg" alt="Sketch 5" />
+                            <img src="web img/insta ts (6).jpg" alt="Sketch 6" />
+                            <img src="web img/Larger then life 2k25  BLACK(1) .png" alt="Sketch 7" />
+                            <img src="web img/Larger then life 2k25  BLACK(2) .png" alt="Sketch 8" />
+                            <img src="web img/Larger then life 2k25  BLACK(3) .png" alt="Sketch 9" />
+                            <img src="web img/Larger then life 2k25  BLACK(4) .png" alt="sketch 10" />
+                            <img src="web img/Larger then life 2k25  BLACK(5) .png" alt="sketch 11" />
+                            <img src="web img/Larger then life 2k25  BLACK(6) .png" alt="sketch 12" />
+
+
+
+                            <!-- Duplicate for seamless loop -->
+                            <img src="web img/insta ts (1).jpg" alt="Sketch 1" />
+                            <img src="web img/insta ts (2).jpg" alt="Sketch 2" />
+                            <img src="web img/insta ts (3).jpg" alt="Sketch 3" />
+                            <img src="web img/insta ts (4).jpg" alt="Sketch 4" />
+                            <img src="web img/insta ts (5).jpg" alt="Sketch 5" />
+                            <img src="web img/insta ts (6).jpg" alt="Sketch 6" />
+                            <img src="web img/Larger then life 2k25  BLACK(1) .png" alt="Sketch 7" />
+                            <img src="web img/Larger then life 2k25  BLACK(2) .png" alt="Sketch 8" />
+                            <img src="web img/Larger then life 2k25  BLACK(3) .png" alt="Sketch 9" />
+                            <img src="web img/Larger then life 2k25  BLACK(4) .png" alt="sketch 10" />
+                            <img src="web img/Larger then life 2k25  BLACK(5) .png" alt="sketch 11" />
+                            <img src="web img/Larger then life 2k25  BLACK(6) .png" alt="sketch 12" />
+
+                        </div>
+                    </div>
+                </div>
+
+                <a href="/" class="inline-block mt-10 text-primary hover:underline">← Back to Portfolio</a>
+            </section>
+        </div>
+    </main>
+
+    <footer class="bg-gray-900 bg-opacity-95 backdrop-blur-lg text-white py-12">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-gray-400">&copy; 2025 Aviral Agarwal. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const toggleBtn = document.getElementById('hamburgerButton');
+        const dropdown = document.getElementById('hamburgerMenu');
+
+        toggleBtn.addEventListener('click', () => {
+            dropdown.classList.toggle('hidden');
+        });
+
+        // Optional: Click outside to close
+        document.addEventListener('click', (e) => {
+            if (!toggleBtn.contains(e.target) && !dropdown.contains(e.target)) {
+                dropdown.classList.add('hidden');
+            }
+        });
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('.escalator-masonry img').forEach(img => {
+                img.addEventListener('click', () => {
+                    const modal = document.createElement('div');
+                    modal.className = 'fixed inset-0 bg-black/80 flex items-center justify-center z-50';
+                    modal.innerHTML = `<img src="${img.src}" class="max-w-full max-h-full rounded-lg" />`;
+                    modal.onclick = () => modal.remove();
+                    document.body.appendChild(modal);
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
