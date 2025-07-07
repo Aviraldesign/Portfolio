@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>College Projects - Aviral Agarwal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Helvetica', sans-serif;
+            color: white;
+            background: linear-gradient(to right, rgba(10, 15, 30, 0.95), rgba(25, 35, 55, 0.95)), url('/images/grid-pattern.png');
+            background-size: cover;
+            background-repeat: repeat;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        main {
+            flex: 1;
+        }
+
+        .glass-panel {
+            background: linear-gradient(135deg, rgba(20, 30, 50, 0.75), rgba(35, 45, 65, 0.75));
+            backdrop-filter: blur(30px);
+            -webkit-backdrop-filter: blur(30px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 16px 48px rgba(0, 0, 0, 0.6);
+            border-radius: 1.25rem;
+            padding: 2rem;
+            position: relative;
+            margin-top: 8rem;
+            max-width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+            z-index: 10;
+            opacity:0.91;
+        }
+
+        video.bg-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            min-height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            opacity: 0.3;
+        }
+
+        .escalator-wrapper {
+            overflow: hidden;
+            position: relative;
+        }
+
+        .escalator-scroll {
+            display: flex;
+            animation: scrollX 60s linear infinite;
+        }
+
+        .escalator-masonry {
+            display: flex;
+            gap: 10px;
+        }
+
+        .escalator-masonry img {
+            width: auto;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 0.75rem;
+        }
+
+        @keyframes scrollX {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <video class="bg-video" autoplay muted loop playsinline>
+        <source src="web img/8198499-hd_1920_1080_25fps.mp4" type="video/mp4">
+
+    </video>
+
+    <header class="fixed top-0 left-0 right-0 bg-gray-900/60 backdrop-blur-xl z-50 shadow-lg border-b border-white/5">
+        <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="/" class="text-2xl font-bold text-white">Aviral Agarwal</a>
+            <div class="flex items-center gap-6 text-gray-300 relative">
+                <a href="/" class="hover:text-white">Home</a>
+                <a href="#projects" class="hover:text-white">Projects</a>
+                <a href="#brands" class="hover:text-white">Brands</a>
+                <a href="#reviews" class="hover:text-white">Reviews</a>
+                <!-- 🔽 Hamburger Dropdown (no absolute) -->
+                <div class="relative">
+                    <button id="hamburgerButton"
+                        class="flex flex-col space-y-1 p-2 rounded hover:bg-gray-700 focus:outline-none">
+                        <span class="w-6 h-0.5 bg-white"></span>
+                        <span class="w-6 h-0.5 bg-white"></span>
+                        <span class="w-6 h-0.5 bg-white"></span>
+                    </button>
+
+                    <!-- 📋 Dropdown Menu -->
+                    <div id="hamburgerMenu"
+                        class="hidden absolute right-0 mt-2 w-48 bg-white text-black rounded shadow-lg border">
+                        <a href="Finance.html" class="block px-4 py-2 hover:bg-gray-200">Finance App Ui</a>
+                        <a href="ecommerce.html" class="block px-4 py-2 hover:bg-gray-200">E-commerce</a>
+                        <a href="BrandIdentity.html" class="block px-4 py-2 hover:bg-gray-200">Brand Identity</a>
+                        <a href="Design.html" class="block px-4 py-2 hover:bg-gray-200">Design Sketches</a>
+                        <a href="Projects.html" class="block px-4 py-2 hover:bg-gray-200">College Projects</a>
+                    </div>
+                </div>
+
+        </nav>
+    </header>
+
+
+    <main class="glass-panel text-center">
+        <h1 class="text-4xl font-bold mb-4">College Projects Showcase</h1>
+        <p class="text-gray-300 mb-8">Featuring practical design solutions from hands-on coursework.</p>
+
+        <div class="text-left">
+            <h2 class="text-2xl font-semibold border-b border-white/20 pb-2 mb-4">Individual Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+                <div class="bg-gray-800 bg-opacity-50 p-4 rounded-xl">
+                    <h3 class="text-xl font-semibold">Table Wrap Dispenser</h3>
+                    <p class="text-gray-400 text-sm">A counter wrap system for hygienic food surface coverage.</p>
+                </div>
+                <div class="bg-gray-800 bg-opacity-50 p-4 rounded-xl">
+                    <h3 class="text-xl font-semibold">Trash Sorting Bin</h3>
+                    <p class="text-gray-400 text-sm">A mechanical product separating organic, plastic, and metal waste.
+                    </p>
+                </div>
+            </div>
+
+            <div class="escalator-wrapper mb-12">
+                <div class="escalator-scroll">
+                    <div class="escalator-masonry">
+                        <img src="web img/insta ts (1).jpg" alt="Sketch 1" />
+                        <img src="web img/insta ts (2).jpg" alt="Sketch 2" />
+                        <img src="web img/insta ts (3).jpg" alt="Sketch 3" />
+                        <img src="web img/insta ts (4).jpg" alt="Sketch 4" />
+                        <img src="web img/insta ts (5).jpg" alt="Sketch 5" />
+                        <img src="web img/insta ts (6).jpg" alt="Sketch 6" />
+                        <img src="web img/Larger then life 2k25  BLACK(1) .png" alt="Sketch 7" />
+                        <img src="web img/Larger then life 2k25  BLACK(2) .png" alt="Sketch 8" />
+                        <img src="web img/Larger then life 2k25  BLACK(3) .png" alt="Sketch 9" />
+                        <img src="web img/Larger then life 2k25  BLACK(4).png" alt="Sketch 10" />
+                        <img src="web img/Larger then life 2k25  BLACK(5).png" alt="Sketch 11" />
+                        <img src="web img/Larger then life 2k25  BLACK(6).png" alt="Sketch 12" />
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="text-2xl font-semibold border-b border-white/20 pb-2 mb-4">Team Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-gray-800 bg-opacity-50 p-4 rounded-xl">
+                    <h3 class="text-xl font-semibold">Cooling Pot Redesign</h3>
+                    <p class="text-gray-400 text-sm">A sustainable cooling solution for Indian homes during summer.</p>
+                </div>
+            </div>
+
+            <div class="escalator-wrapper mt-10">
+                <div class="escalator-scroll">
+                    <div class="escalator-masonry">
+                        <img src="web img/insta ts (1).jpg" alt="Sketch 1" />
+                        <img src="web img/insta ts (2).jpg" alt="Sketch 2" />
+                        <img src="web img/insta ts (3).jpg" alt="Sketch 3" />
+                        <img src="web img/insta ts (4).jpg" alt="Sketch 4" />
+                        <img src="web img/insta ts (5).jpg" alt="Sketch 5" />
+                        <img src="web img/insta ts (6).jpg" alt="Sketch 6" />
+                        <img src="web img/Larger then life 2k25  BLACK(1) .png" alt="Sketch 7" />
+                        <img src="web img/Larger then life 2k25  BLACK(2) .png" alt="Sketch 8" />
+                        <img src="web img/Larger then life 2k25  BLACK(3) .png" alt="Sketch 9" />
+                        <img src="web img/Larger then life 2k25  BLACK(4).png" alt="Sketch 10" />
+                        <img src="web img/Larger then life 2k25  BLACK(5).png" alt="Sketch 11" />
+                        <img src="web img/Larger then life 2k25  BLACK(6).png" alt="Sketch 12" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-900 bg-opacity-95 backdrop-blur-lg text-white py-12">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-gray-400">&copy; 2025 Aviral Agarwal. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const toggleBtn = document.getElementById('hamburgerButton');
+        const dropdown = document.getElementById('hamburgerMenu');
+
+        toggleBtn.addEventListener('click', () => {
+            dropdown.classList.toggle('hidden');
+        });
+
+        // Optional: Click outside to close
+        document.addEventListener('click', (e) => {
+            if (!toggleBtn.contains(e.target) && !dropdown.contains(e.target)) {
+                dropdown.classList.add('hidden');
+            }
+        });
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('.escalator-masonry img').forEach(img => {
+                img.addEventListener('click', () => {
+                    const modal = document.createElement('div');
+                    modal.className = 'fixed inset-0 bg-black/80 flex items-center justify-center z-50';
+                    modal.innerHTML = `<img src="${img.src}" class="max-w-full max-h-full rounded-lg" />`;
+                    modal.onclick = () => modal.remove();
+                    document.body.appendChild(modal);
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aviral Agarwal - UI/UX & Digital Product Designer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <style>
+        :where([class^="ri-"])::before {
+            content: "\f3c2";
+        }
+
+        .skill-bar {
+            height: 4px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        .skill-progress {
+            height: 100%;
+            transition: width 1s ease-in-out;
+        }
+
+        .glass-card {
+            background: rgba(17, 24, 39, 0.7);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+        }
+
+        .glass-button {
+            background: rgba(37, 99, 235, 0.2);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 16px 0 rgba(37, 99, 235, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .glass-button:hover {
+            background: rgba(37, 99, 235, 0.3);
+            box-shadow: 0 8px 24px 0 rgba(37, 99, 235, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .glow {
+            position: relative;
+        }
+
+        .glow::after {
+            content: '';
+            position: absolute;
+            inset: -1px;
+            background: linear-gradient(45deg, #2563eb, #4f46e5);
+            filter: blur(15px);
+            z-index: -1;
+            opacity: 0.5;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #2563eb, #4f46e5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .pattern-bg {
+            background-image: radial-gradient(rgba(37, 99, 235, 0.1) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        .float-animation {
+            animation: float 4s ease-in-out infinite;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb',
+                        secondary: '#64748b'
+                    },
+                    borderRadius: {
+                        'none': '0px',
+                        'sm': '4px',
+                        DEFAULT: '8px',
+                        'md': '12px',
+                        'lg': '16px',
+                        'xl': '20px',
+                        '2xl': '24px',
+                        '3xl': '32px',
+                        'full': '9999px',
+                        'button': '8px'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-gray-900 font-['Helvetica'] text-white">
+    <header class="fixed top-0 left-0 right-0 bg-gray-900/60 backdrop-blur-xl z-50 shadow-lg border-b border-white/5">
+        <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="#" class="text-2xl font-['Helvetica'] font-bold text-white glow">Aviral Agarwal</a>
+            <div class="flex items-center gap-8">
+                <a href="#home" class="text-gray-300 hover:text-primary transition-colors">Home</a>
+                <a href="#about" class="text-gray-300 hover:text-primary transition-colors">About</a>
+                <a href="#portfolio" class="text-gray-300 hover:text-primary transition-colors">Portfolio</a>
+                <a href="#contact" class="text-gray-300 hover:text-primary transition-colors">Contact</a>
+                <a href="#contact"
+                    class="glass-button text-white px-8 py-3 !rounded-button whitespace-nowrap glow">Let's talk</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="pt-20">
+        <section id="home" class="relative min-h-[90vh] flex items-center"
+            style="background-image: url('https://readdy.ai/api/search-image?query=modern%20minimalist%20workspace%20at%20night%20with%20neon%20lights%2C%20dark%20moody%20atmosphere%20with%20blue%20and%20purple%20accents%2C%20professional%20lighting%2C%20cinematic%20style%2C%20leaving%20space%20on%20the%20left%20side%20for%20text&width=1920&height=1080&seq=1&orientation=landscape'); background-size: cover; background-position: center;">
+            <div class="absolute inset-0 bg-gradient-to-r from-gray-900/95 to-gray-900/30"></div>
+            <div class="container mx-auto px-6 relative">
+                <div class="max-w-2xl">
+                    <h1 class="text-5xl font-['Helvetica'] font-bold leading-tight mb-6">UI/UX & Digital Product
+                        Designer</h1>
+                    <p
+                        class="text-xl text-gray-200 mb-8 bg-black/20 backdrop-blur-sm p-4 rounded-lg border border-white/10 shadow-lg">
+                        Creating intuitive and engaging digital experiences that bridge the gap between users and
+                        technology. Currently a 2nd year graduate student at World University of Design.</p>
+                    <div class="flex gap-4">
+                        <a href="#contact"
+                            class="glass-button text-white px-8 py-3 !rounded-button whitespace-nowrap glow">Let's Work
+                            Together</a>
+
+                        <a href="#portfolio"
+                            class="glass-button border-white/10 px-8 py-3 !rounded-button hover:border-primary/50 whitespace-nowrap">View
+                            Portfolio</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="py-24 pattern-bg relative">
+            <div class="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10"></div>
+            <div class="container mx-auto px-6">
+                <div class="grid grid-cols-2 gap-16 items-center">
+                    <div style="background-image: url('web img/avi\ phot.jpg');"
+                        class="h-[600px] rounded-lg bg-cover bg-center glass-card float-animation"></div>
+                    <div class="glass-card p-8 rounded-lg">
+                        <h2 class="text-4xl font-['Helvetica'] font-bold mb-6 text-white">About Me</h2>
+                        <p class="text-gray-200 mb-8 text-lg">I'm a passionate UI/UX and Digital Product Designer with
+                            1.5 years of experience in creating user-centered digital solutions. With expertise in AI
+                            implementation and integration, I specialize in creating intelligent design solutions that
+                            combine beautiful interfaces with smart functionality. Currently pursuing my B.Des in UX &
+                            Digital Product Design at World University of Design.</p>
+                        <div class="space-y-6">
+                            <div>
+                                <h3 class="text-xl font-semibold mb-3 text-white">Design & AI Skills</h3>
+                                <div class="space-y-4">
+                                    <div>
+                                        <div class="flex justify-between mb-1">
+                                            <span class="text-sm text-gray-300">UI/UX Design</span>
+                                            <span class="text-sm text-gray-300">60%</span>
+                                        </div>
+                                        <div class="skill-bar">
+                                            <div class="skill-progress bg-primary" style="width: 60%"></div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="flex justify-between mb-1">
+                                            <span class="text-sm text-gray-300">Graphic Design</span>
+                                            <span class="text-sm text-gray-300">70%</span>
+                                        </div>
+                                        <div class="skill-bar">
+                                            <div class="skill-progress bg-primary" style="width: 70%"></div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="flex justify-between mb-1">
+                                            <span class="text-sm text-gray-300">AI Implementation</span>
+                                            <span class="text-sm text-gray-300">80%</span>
+                                        </div>
+                                        <div class="skill-bar">
+                                            <div class="skill-progress bg-primary" style="width: 80%"></div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="flex justify-between mb-1">
+                                            <span class="text-sm text-gray-300">Product Management</span>
+                                            <span class="text-sm text-gray-300">75%</span>
+                                        </div>
+                                        <div class="skill-bar">
+                                            <div class="skill-progress bg-primary" style="width: 75%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-3 text-white">Technical Skills</h3>
+                                <div class="flex flex-wrap gap-3">
+                                    <span
+                                        class="px-4 py-2 glass-button rounded-full text-sm text-white hover:scale-105 transition-transform">Python</span>
+                                    <span
+                                        class="px-4 py-2 glass-button rounded-full text-sm text-white hover:scale-105 transition-transform">HTML/CSS</span>
+                                    <span
+                                        class="px-4 py-2 glass-button rounded-full text-sm text-white hover:scale-105 transition-transform">Figma</span>
+                                    <span
+                                        class="px-4 py-2 glass-button rounded-full text-sm text-white hover:scale-105 transition-transform">Adobe
+                                        XD</span>
+                                    <span
+                                        class="px-4 py-2 glass-button rounded-full text-sm text-white hover:scale-105 transition-transform">Sketch</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio" class="py-24 pattern-bg relative overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10 pointer-events-none"></div>
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-['Helvetica'] font-bold text-center mb-12">Featured Work</h2>
+                <div class="flex justify-center gap-4 mb-12">
+
+                    <button
+                        class="px-6 py-2 !rounded-button border border-gray-200 hover:border-primary hover:text-primary transition-colors whitespace-nowrap">UI/UX</button>
+                    <button
+                        class="px-6 py-2 !rounded-button border border-gray-200 hover:border-primary hover:text-primary transition-colors whitespace-nowrap">Graphic
+                        Design</button>
+                    <button
+                        class="px-6 py-2 !rounded-button border border-gray-200 hover:border-primary hover:text-primary transition-colors whitespace-nowrap">Digital
+                        Products</button>
+                    <button
+                        class="px-6 py-2 !rounded-button border border-gray-200 hover:border-primary hover:text-primary transition-colors whitespace-nowrap">Passion
+                        Projects</button>
+                    <button
+                        class="px-6 py-2 !rounded-button border border-gray-200 hover:border-primary hover:text-primary transition-colors whitespace-nowrap">College
+                        Work</button>
+                </div>
+                <div class="grid grid-cols-4 gap-6">
+                    <div
+                        class="group relative overflow-hidden rounded-lg glass-card hover:shadow-xl transition-all duration-300">
+                        <div style="background-image: url('https://readdy.ai/api/search-image?query=modern%20mobile%20app%20interface%20design%20for%20finance%20application%2C%20clean%20and%20minimal%20UI%20design%2C%20professional%20presentation&width=400&height=300&seq=3&orientation=landscape');"
+                            class="h-[300px] bg-cover bg-center group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div
+                            class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <div class="text-center">
+                                <h3 class="text-white text-xl font-semibold mb-2">Finance App UI</h3>
+                                <a href="Finance.html" target="_blank">
+                                    <button
+                                        class="bg-white text-gray-900 px-6 py-2 !rounded-button hover:bg-primary hover:text-white transition-colors whitespace-nowrap">
+                                        View Project
+                                    </button>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div
+                        class="group relative overflow-hidden rounded-lg glass-card hover:shadow-xl transition-all duration-300">
+                        <div style="background-image: url('https://readdy.ai/api/search-image?query=modern%20website%20design%20for%20e-commerce%20platform%2C%20showing%20product%20layout%20and%20navigation%2C%20professional%20web%20design&width=400&height=300&seq=4&orientation=landscape');"
+                            class="h-[300px] bg-cover bg-center group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div
+                            class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <div class="text-center">
+                                <h3 class="text-white text-xl font-semibold mb-2">E-commerce Website</h3>
+                                <a href="ecommerce.html" target="_blank">
+                                    <button
+                                        class="bg-white text-gray-900 px-6 py-2 !rounded-button hover:bg-primary hover:text-white transition-colors whitespace-nowrap">
+                                        View Project
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="group relative overflow-hidden rounded-lg glass-card hover:shadow-xl transition-all duration-300">
+                        <div style="background-image: url('https://readdy.ai/api/search-image?query=brand%20identity%20design%20presentation%20showing%20logo%2C%20color%20palette%20and%20typography%2C%20professional%20graphic%20design&width=400&height=300&seq=5&orientation=landscape');"
+                            class="h-[300px] bg-cover bg-center group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div
+                            class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <div class="text-center">
+                                <h3 class="text-white text-xl font-semibold mb-2">Brand Identity</h3>
+                                <a href="BrandIdentity.html" target="_blank">
+                                    <button
+                                        class="bg-white text-gray-900 px-6 py-2 !rounded-button hover:bg-primary hover:text-white transition-colors whitespace-nowrap">
+                                        View Project
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="group relative overflow-hidden rounded-lg glass-card hover:shadow-xl transition-all duration-300">
+                        <div style="background-image: url('https://readdy.ai/api/search-image?query=creative%20sketchbook%20pages%20showing%20design%20process%20and%20ideation%2C%20hand%20drawn%20sketches%20and%20notes&width=400&height=300&seq=6&orientation=landscape');"
+                            class="h-[300px] bg-cover bg-center group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div
+                            class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <div class="text-center">
+                                <h3 class="text-white text-xl font-semibold mb-2">Design Sketches</h3>
+                                <a href="Design.html" target="_blank">
+                                    <button
+                                        class="bg-white text-gray-900 px-6 py-2 !rounded-button hover:bg-primary hover:text-white transition-colors whitespace-nowrap">
+                                        View Project
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="group relative overflow-hidden rounded-lg glass-card hover:shadow-xl transition-all duration-300">
+                        <div style="background-image: url('https://readdy.ai/api/search-image?query=student%20design%20team%20working%20together%20on%20a%20collaborative%20project%2C%20modern%20university%20setting&width=400&height=300&seq=7&orientation=landscape');"
+                            class="h-[300px] bg-cover bg-center group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div
+                            class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <div class="text-center">
+                                <h3 class="text-white text-xl font-semibold mb-2">College Projects</h3>
+                                <a href="Projects.html" target="_blank">
+                                    <button
+                                        class="bg-white text-gray-900 px-6 py-2 !rounded-button hover:bg-primary hover:text-white transition-colors whitespace-nowrap">
+                                        View Project
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-24 pattern-bg relative">
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent to-white/50 pointer-events-none"></div>
+            <div class="container mx-auto px-6">
+                <div class="max-w-4xl mx-auto">
+                    <h2 class="text-4xl font-['Helvetica'] font-bold text-center mb-12">Let's Work Together</h2>
+                    <div class="glass-card rounded-lg p-8 shadow-lg">
+                        <form id="contactForm" class="space-y-6">
+                            <div class="grid grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-sm font-medium text-white mb-2">Name</label>
+                                    <input name="name" type="text" required
+                                        class="w-full px-4 py-2 border border-gray-200 rounded focus:outline-none focus:border-primary bg-white text-gray-900"
+                                        placeholder="Your name">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-white mb-2">Email</label>
+                                    <input name="email" type="email" required
+                                        class="w-full px-4 py-2 border border-gray-200 rounded focus:outline-none focus:border-primary bg-white text-gray-900"
+                                        placeholder="Your email">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-white mb-2">Mobile Number</label>
+                                    <input name="mobile" type="text" required
+                                        class="w-full px-4 py-2 border border-gray-200 rounded focus:outline-none focus:border-primary bg-white text-gray-900"
+                                        placeholder="e.g.+91-XXXXX XXXXX">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-white mb-2">Social Media Link</label>
+                                    <input name="socialMedia" type="text" required
+                                        class="w-full px-4 py-2 border border-gray-200 rounded focus:outline-none focus:border-primary bg-white text-gray-900"
+                                        placeholder="Portfolio, Instagram, Linkedin, etc.">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-white mb-2">Project Type</label>
+                                <select name="projectType"
+                                    class="w-full px-4 py-2 border border-gray-200 rounded focus:outline-none focus:border-primary bg-white text-gray-900 pr-8">
+                                    <option>UI/UX Design</option>
+                                    <option>Graphic Design</option>
+                                    <option>Digital Product</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-white mb-2">Message</label>
+                                <textarea name="message"
+                                    class="w-full px-4 py-2 border border-gray-200 rounded focus:outline-none focus:border-primary bg-white text-gray-900 h-32"
+                                    placeholder="Tell me about your project"></textarea>
+                            </div>
+
+                            <button type="submit"
+                                class="w-full bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700 transition-colors whitespace-nowrap">Send
+                                Message</button>
+                        </form>
+
+                        <p id="responseMessage" class="text-center mt-4 text-green-400 font-semibold"></p>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer class="bg-gray-900 bg-opacity-95 backdrop-blur-lg text-white py-12 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10 pointer-events-none"></div>
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-['Helvetica'] font-bold mb-4">Aviral Agarwal</h3>
+                    <p class="text-gray-400">UI/UX & Digital Product Designer
+                        <br>
+                        Country Bharat/India
+
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition-colors">About</a></li>
+                        <li><a href="#portfolio" class="text-gray-400 hover:text-white transition-colors">Portfolio</a>
+                        </li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Contact</h4>
+                    <ul class="space-y-2">
+                        <li class="text-gray-400">aviral.design2025@gmail.com</li>
+                        <li class="text-gray-400">+91 8077219355</li>
+                        <li class="text-gray-400">World University of Design, India</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Follow Me</h4>
+                    <div class="flex gap-4">
+                        <a href="#"
+                            class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors">
+                            <i class="ri-linkedin-fill"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors">
+                            <i class="ri-dribbble-fill"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors">
+                            <i class="ri-behance-fill"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors">
+                            <i class="ri-instagram-fill"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Aviral Agarwal. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script id="scroll-spy">
+        document.addEventListener('DOMContentLoaded', function () {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('nav a');
+            window.addEventListener('scroll', () => {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    if (scrollY >= sectionTop - 100) {
+                        current = section.getAttribute('id');
+                    }
+                });
+                navLinks.forEach(link => {
+                    link.classList.remove('text-primary');
+                    if (link.getAttribute('href').includes(current)) {
+                        link.classList.add('text-primary');
+                    }
+                });
+            });
+        });
+    </script>
+    <script>
+        const form = document.getElementById('contactForm');
+        form.addEventListener('submit', async function (e) {
+            e.preventDefault();
+
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData.entries());
+
+            const response = await fetch('/submit-form', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data)
+            });
+
+            const result = await response.json();
+            document.getElementById('responseMessage').innerText = result.message;
+            form.reset();
+        });
+    </script>
+    <script id="portfolio-filter">
+        document.addEventListener('DOMContentLoaded', function () {
+            const filterButtons = document.querySelectorAll('#portfolio .flex.justify-center button');
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    filterButtons.forEach(btn => btn.classList.remove('bg-primary', 'text-white'));
+                    button.classList.add('bg-primary', 'text-white');
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
