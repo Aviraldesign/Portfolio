@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const { google } = require('googleapis');
-const credentials = require('./contactformproject-465213-1c4d44b9fab7.json'); // Downloaded from Google Cloud
+const credentials = JSON.parse(process.env.GOOGLE_CREDENTIALS);
 
 const app = express();
 const PORT = process.env.PORT || 3000;
