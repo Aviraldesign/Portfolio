@@ -15,11 +15,12 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(__dirname));
 
 // Google Sheets Setup
-const auth = new google.auth.GoogleAuth({
-  credentials: credentials,
-  scopes: ['https://www.googleapis.com/auth/spreadsheets'],
-});
-
+const auth = new google.auth.JWT(
+  credentials.client_email,
+  null,
+  credentials.private_key,
+  ['https://www.googleapis.com/auth/spreadsheets']
+);
 const SHEET_ID = '1g8pQdorETyaG8LAAwTYfzI0DFLa1Gef3rSYPjT3C6Es'; // 🟡 Replace with your actual sheet ID
 
 app.post('/submit-form', async (req, res) => {
